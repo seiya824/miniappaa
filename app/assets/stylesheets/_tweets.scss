@@ -1,0 +1,45 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.w-100px {
+  width: 100px !important;
+  margin-left: 10px;
+}
+.bottom {
+  margin-bottom: 5px;
+}
+.sign {
+  padding-top: 100px;
+}
+.padding {
+  padding-top: 210px;
+  padding-bottom: 10px;
+}
+.text-align {
+  text-align: center;
+  font-size: 18px;
+}
+.w-300px {
+  width: 300px;
+  margin: 0 auto;
+}
+.w-600px {
+  width: 600px;
+  margin: 0 auto;
+}
+.m-200px {
+  margin-top: 200px;
+}
+.contents {
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 100px;
+  .contents-tweet {
+    .waku {
+      .card {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

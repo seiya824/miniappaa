@@ -1,0 +1,19 @@
+<div class="waku pt-3">
+  <div class="card text-white bg-info">
+    <div class="card-body">
+      <div class="card-title">
+        <h5><%= tweet.user.name %></h5>
+      </div>
+      <div class="card-text">
+        <p><%= tweet.tweet %></p>
+      </div>
+    </div>
+    <div class="mr-auto">
+      <%= link_to "show", tweet_path(tweet.id), class: "btn btn-secondary w-100px bottom" %>
+      <% if user_signed_in? && tweet.user_id == current_user.id %>
+        <%= link_to "edit", edit_tweet_path(tweet.id), class:"btn btn-secondary w-100px bottom" %>
+        <%= link_to "destory", "/tweets/#{tweet.id}", method: :delete, class:"btn btn-secondary w-100px bottom" %>
+      <% end %>
+    </div>
+  </div>
+</div>

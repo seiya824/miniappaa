@@ -1,0 +1,33 @@
+<div class="waku m-200px w-600px">
+  <div class="card text-white bg-info">
+    <div class="card-body">
+      <div class="card-title">
+        <h5><%= @tweet.user.name %></h5>
+      </div>
+      <div class="card-text">
+        <p><%= @tweet.tweet %></p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <%= form_for [@tweet,@comment], html: {id: "new_comment"} do |f| %>
+        <h2 class="text-align">投稿</h2>
+        <%= f.text_area :text,rows: "2", class: "form-control textbox", placeholder: "text" %>
+        <div class="w-300px">
+          <%= f.submit "COMMENT", class: "btn btn-lg btn-primary btn-block form-send" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="card">
+      <div class="card-body">
+      <h6>コメント欄</h6>
+        <div class="comment__show">
+          <% @comments.each do |comment| %>
+            <%= render partial: "comment", locals: {comment: comment} %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
